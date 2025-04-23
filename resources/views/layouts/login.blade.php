@@ -13,17 +13,11 @@
                     <div class="card-header text-center bg-primary text-white">
                         <h4>Iniciar Sesión</h4>
                     </div>
-                    <div class="card-body">
-                        @if ($errors->any())
-                            <div class="alert alert-danger">
-                                {{ $errors->first() }}
-                            </div>
-                        @endif
-                        <form method="POST" action="{{ route('login') }}">
-                            @csrf
+                    <form method="post" action="index.blade.php">
+                            
                             <div class="mb-3">
                                 <label for="email" class="form-label">Correo Electrónico</label>
-                                <input type="email" name="email" class="form-control" id="email" required autofocus value="{{ old('email') }}">
+                                <input type="email" name="email" class="form-control" id="email" required autofocus value="">
                             </div>
                             <div class="mb-3">
                                 <label for="password" class="form-label">Contraseña</label>
@@ -35,7 +29,7 @@
                         </form>
                     </div>
                     <div class="card-footer text-muted text-center">
-                        © {{ date('Y') }} TuApp
+                        Lenin
                     </div>
                 </div>
             </div>

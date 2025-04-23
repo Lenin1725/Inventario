@@ -12,10 +12,23 @@
         <p>Has iniciado sesión correctamente.</p>
 
         <div class="d-grid gap-3 col-6 mx-auto my-4">
-        <a href="{{ route('producto.create') }}" class="btn btn-success">Agregar Producto</a>
+        <a href="{{ route('producto.create') }}" class="btn btn-success">Agregar Producto
+</a>
+
 
             <a href="#" class="btn btn-danger">Eliminar Producto</a>
-            <a href="#" class="btn btn-warning text-white">Editar Producto</a>
+
+  <form 
+    method="POST" 
+    action="{{ route('edit.blade.php', $producto->id) }}" 
+    style="display: inline;"   {{-- para que el botón quede en línea --}}
+  >
+
+    <button type="submit" class="btn btn-warning text-white">
+      Editar Producto
+    </button>
+  </form>
+
         </div>
 
 
